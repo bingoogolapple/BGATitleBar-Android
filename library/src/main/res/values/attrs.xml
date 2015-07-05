@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BGATitlebar">
+        <!-- 项目中把下面这五项定义在styles.xml里 -->
+        <attr name="bgatitlebar_leftAndRightTextColor" format="reference|color" />
+        <attr name="bgatitlebar_titleTextColor" format="reference|color" />
+        <attr name="bgatitlebar_leftAndRightTextSize" format="reference|dimension" />
+        <attr name="bgatitlebar_titleTextSize" format="reference|dimension" />
+        <attr name="bgatitlebar_leftAndRightPadding" format="reference|dimension" />
+
+        <!-- 下面这几项更具每个页面的业务写在layout中 -->
+        <attr name="bgatitlebar_leftText" format="reference|string" />
+        <attr name="bgatitlebar_rightText" format="reference|string" />
+        <attr name="bgatitlebar_titleText" format="reference|string" />
+        <attr name="bgatitlebar_leftDrawable" format="reference" />
+        <attr name="bgatitlebar_titleDrawable" format="reference" />
+        <attr name="bgatitlebar_rightDrawable" format="reference" />
+        <!-- 当既有titleText，又有titleDrawable时，设置该属性 -->
+        <attr name="bgatitlebar_titleDrawablePadding" format="reference|dimension" />
+        <!-- 当既有leftText，又有leftDrawable时，设置该属性 -->
+        <attr name="bgatitlebar_leftDrawablePadding" format="reference|dimension" />
+        <!-- 当既有rightText，又有rightDrawable时，设置该属性 -->
+        <attr name="bgatitlebar_rightDrawablePadding" format="reference|dimension" />
+        <!-- 下面三项通常情况下不用，使用默认值就好。某个界面标题特别长并且左右文字短或者左右文字特别长并且标题特别短时单独配置 -->
+        <attr name="bgatitlebar_leftMaxWidth" format="reference|dimension" />
+        <attr name="bgatitlebar_rightMaxWidth" format="reference|dimension" />
+        <attr name="bgatitlebar_titleMaxWidth" format="reference|dimension" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WrapWrap.Vertical"
+    android:background="@mipmap/popupwindow_graybg_topcenterarrow">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_home_category_data"
+        style="@style/MatchAuto"
+        android:scrollbarThumbVertical="@color/popupwindow_itembg_pressed"
+        android:scrollbars="vertical"
+        android:scrollbarSize="1dp"
+        android:overScrollMode="ifContentScrolls"/>
+
+    <!-- 在PopupWindow中，设置AppCompatButton，Button的高度有问题，这里用AppCompatTextView代替 -->
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/btn_home_category_edit"
+        style="@style/MatchWrap"
+        android:background="@drawable/selector_popupwindow_edit"
+        android:gravity="center"
+        android:padding="@dimen/small"
+        android:text="编辑我的分组"
+        android:clickable="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textSize_14" />
+</LinearLayout>

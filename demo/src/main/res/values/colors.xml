@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_dark">#4D4D4D</color>
+
+    <color name="orange_normal">#FD8225</color>
+    <!--按下时80%的透明度-->
+    <color name="orange_pressed">#CCFD8225</color>
+    <color name="popupwindow_itembg_pressed">#2F2F2F</color>
+    <color name="popupwindow_itembg_checked">#8F8F8F</color>
+
+    <color name="maintab_titlebar_bg">#f8f8f8</color>
+    <color name="gray_line">#dedede</color>
+
+</resources>
