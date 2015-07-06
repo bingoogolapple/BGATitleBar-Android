@@ -6,7 +6,7 @@
 
 工作以来公司UI设计师出的Android效果图都是iOS风格的Titlebar，新项目还是用原来那一套，不想重复造轮子，所以趁着这次练习 [仿新浪微博Android客户端](https://github.com/bingoogolapple/BGAWeiBo-Android)，抽取一个通用的iOS风格的Titlebar
 
-** 但是作为Android开发者，平时学习练手时还是得紧跟Google的步伐，说不定哪天公司的UI射击狮们就出一套MD风格的效果图 **
+*** 但是作为Android开发者，平时学习练手时还是得紧跟Google的步伐，说不定哪天公司的UI射击狮们就出一套MD风格的效果图 ***
 
 demo中演示了各种情况的标题和新浪微博首页选择微博分类案例
 
