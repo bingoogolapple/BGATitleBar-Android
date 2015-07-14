@@ -29,7 +29,7 @@ public class HomeCategoryPopupWindow extends BasePopupWindow {
     private RecyclerView mCategoryRv;
     private CategoryAdapter mCategoryAdapter;
     private HomeCategoryPopupWindowDelegate mDelegate;
-    List<HomeCategory> mHomeCategories;
+    private List<HomeCategory> mHomeCategories;
 
     public HomeCategoryPopupWindow(Activity activity, View anchorView) {
         super(activity, R.layout.popwindow_home_category, anchorView, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
