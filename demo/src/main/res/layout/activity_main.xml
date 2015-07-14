@@ -49,6 +49,9 @@
         style="@style/TitleBar"
         app:bgatitlebar_leftText="我是左边"
         app:bgatitlebar_rightText="右边"
+        app:bgatitlebar_isTitleTextBold="false"
+        app:bgatitlebar_isLeftTextBold="true"
+        app:bgatitlebar_isRightTextBold="true"
         app:bgatitlebar_titleMaxWidth="200dp"
         app:bgatitlebar_titleText="我是头部很长很长的标题" />
 

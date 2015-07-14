@@ -99,6 +99,12 @@ public class BGATitlebar extends RelativeLayout implements View.OnClickListener 
             setRightCtvMaxWidth(typedArray.getDimensionPixelSize(attr, dp2px(getContext(), 85)));
         } else if (attr == R.styleable.BGATitlebar_bgatitlebar_titleMaxWidth) {
             setTitleCtvMaxWidth(typedArray.getDimensionPixelSize(attr, dp2px(getContext(), 144)));
+        } else if (attr == R.styleable.BGATitlebar_bgatitlebar_isTitleTextBold) {
+            mTitleCtv.getPaint().setFakeBoldText(typedArray.getBoolean(attr, true));
+        } else if (attr == R.styleable.BGATitlebar_bgatitlebar_isLeftTextBold) {
+            mLeftCtv.getPaint().setFakeBoldText(typedArray.getBoolean(attr, false));
+        } else if (attr == R.styleable.BGATitlebar_bgatitlebar_isRightTextBold) {
+            mRightCtv.getPaint().setFakeBoldText(typedArray.getBoolean(attr, false));
         }
     }
 

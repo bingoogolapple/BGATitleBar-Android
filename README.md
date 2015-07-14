@@ -1,6 +1,7 @@
-:running:BGATitlebar-Android v1.0.0:running:
+:running:BGATitlebar-Android:running:
 ============
 
+[ ![Download](https://api.bintray.com/packages/bingoogolapple/maven/bga-titlebar/images/download.svg) ](https://bintray.com/bingoogolapple/maven/bga-titlebar/_latestVersion)
 >关于我<br/>
 >微博：<a href="http://weibo.com/bingoogol" target="_blank">bingoogolapple</a>&nbsp;&nbsp;&nbsp;&nbsp;主页：<a  href="http://www.bingoogolapple.cn" target="_blank">bingoogolapple.cn</a>&nbsp;&nbsp;&nbsp;&nbsp;邮箱：<a href="mailto:bingoogolapple@gmail.com" target="_blank">bingoogolapple@gmail.com</a>
 
@@ -20,7 +21,7 @@ demo中演示了各种情况的标题和新浪微博首页选择微博分类案�
 ```groovy
 dependencies {
     compile 'com.android.support:appcompat-v7:22.2.0'
-    compile 'cn.bingoogolapple:bga-titlebar:1.0.0@aar'
+    compile 'cn.bingoogolapple:bga-titlebar:latestVersion@aar'
 }
 ```
 
@@ -86,6 +87,12 @@ mTitlebar.setDelegate(new BGATitlebar.BGATitlebarDelegate() {
 * bgatitlebar_leftMaxWidth 左边按钮的最大宽度
 * bgatitlebar_rightMaxWidth 右边按钮的最大宽度
 * bgatitlebar_titleMaxWidth 中间标题的最大宽度
+
+>下面三项通常情况下不用，使用默认值就好。
+
+* bgatitlebar_isTitleTextBold 标题文字是否为粗体，默认为true
+* bgatitlebar_isLeftTextBold 左边文字是否为粗体，默认为false
+* bgatitlebar_isRightTextBold 右边文字是否为粗体，默认为false
 
 ### 代码是最好的老师，更多详细用法请查看[demo](https://github.com/bingoogolapple/BGATitlebar-Android/tree/master/demo):feet:
 

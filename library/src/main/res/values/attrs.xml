@@ -26,6 +26,12 @@
         <attr name="bgatitlebar_leftMaxWidth" format="reference|dimension" />
         <attr name="bgatitlebar_rightMaxWidth" format="reference|dimension" />
         <attr name="bgatitlebar_titleMaxWidth" format="reference|dimension" />
+        <!-- 标题文字是否为粗体，默认为true -->
+        <attr name="bgatitlebar_isTitleTextBold" format="boolean" />
+        <!-- 左边文字是否为粗体，默认为false -->
+        <attr name="bgatitlebar_isLeftTextBold" format="boolean" />
+        <!-- 右边文字是否为粗体，默认为false -->
+        <attr name="bgatitlebar_isRightTextBold" format="boolean" />
     </declare-styleable>
 
 </resources>
