@@ -12,7 +12,7 @@
 demo中演示了各种情况的标题和新浪微博首页选择微博分类案例
 
 ### 效果图
-![Demo](https://raw.githubusercontent.com/bingoogolapple/BGATitlebar-Android/master/screenshots/demo.gif)
+![Demo](http://7xk9dj.com1.z0.glb.clouddn.com/bgatitlebar/screenshots/bgatitlebar.gif)
 
 ### 基本使用
 

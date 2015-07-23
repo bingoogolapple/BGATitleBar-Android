@@ -11,7 +11,7 @@
         <item name="android:background">@drawable/layer_titlebar_bg</item>
         <item name="bgatitlebar_leftAndRightTextColor">@color/selector_orange</item>
         <item name="bgatitlebar_leftAndRightTextSize">@dimen/textSize_16</item>
-        <item name="bgatitlebar_titleTextColor">@color/black_dark</item>
+        <item name="bgatitlebar_titleTextColor">@color/black</item>
         <item name="bgatitlebar_titleTextSize">@dimen/textSize_18</item>
         <item name="bgatitlebar_leftAndRightPadding">@dimen/middle</item>
 

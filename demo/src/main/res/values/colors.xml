@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black_dark">#4D4D4D</color>
+    <color name="black">#4D4D4D</color>
+    <color name="gray">#8f8f8f</color>
 
     <color name="orange_normal">#FD8225</color>
     <!--按下时80%的透明度-->

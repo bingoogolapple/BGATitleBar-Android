@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/MatchWrap.Vertical">
 
     <LinearLayout
@@ -11,26 +12,27 @@
             android:layout_width="0dp"
             android:layout_height="1px"
             android:layout_weight="1"
-            android:background="@color/black_dark" />
+            android:background="@color/black" />
 
         <TextView
             android:id="@+id/tv_item_home_header"
             style="@style/WrapWrap"
             android:padding="0dp"
             android:text="我的分组"
-            android:textColor="@color/black_dark"
+            android:textColor="@color/black"
             android:textSize="@dimen/textSize_10" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="1px"
             android:layout_weight="3"
-            android:background="@color/black_dark" />
+            android:background="@color/black" />
     </LinearLayout>
 
-    <android.support.v7.widget.AppCompatCheckedTextView
+    <cn.bingoogolapple.badgeview.BGABadgeCheckedTextView
         android:id="@+id/ctv_item_home_category"
         style="@style/MatchWrap"
+        app:badge_bgColor="@color/orange_normal"
         android:layout_marginBottom="2dp"
         android:layout_marginTop="2dp"
         android:background="@drawable/selector_popupwindow_item_graybg"

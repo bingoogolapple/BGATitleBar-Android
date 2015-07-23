@@ -7,13 +7,13 @@ import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.CheckedTextView;
 
 import java.util.List;
 
 import cn.bingoogolapple.androidcommon.adapter.BGAOnItemChildClickListener;
 import cn.bingoogolapple.androidcommon.adapter.BGARecyclerViewAdapter;
 import cn.bingoogolapple.androidcommon.adapter.BGAViewHolderHelper;
+import cn.bingoogolapple.badgeview.BGABadgeCheckedTextView;
 import cn.bingoogolapple.titlebar.demo.R;
 import cn.bingoogolapple.titlebar.demo.ui.model.HomeCategory;
 import cn.bingoogolapple.titlebar.demo.util.ToastUtils;
@@ -111,18 +111,18 @@ public class HomeCategoryPopupWindow extends BasePopupWindow {
                 viewHolderHelper.setVisibility(R.id.ll_item_home_header, View.VISIBLE);
                 viewHolderHelper.setText(R.id.tv_item_home_header, homeCategory.header);
             }
-            CheckedTextView categoryCtv = viewHolderHelper.getView(R.id.ctv_item_home_category);
+            BGABadgeCheckedTextView categoryBctv = viewHolderHelper.getView(R.id.ctv_item_home_category);
             if (homeCategory.selected) {
-                categoryCtv.setChecked(true);
+                categoryBctv.setChecked(true);
             } else {
-                categoryCtv.setChecked(false);
+                categoryBctv.setChecked(false);
             }
             if (homeCategory.hasNewStatus) {
-                categoryCtv.setCompoundDrawablesWithIntrinsicBounds(null, null, mContext.getResources().getDrawable(R.drawable.shape_orange_circle_small), null);
+                categoryBctv.showCirclePointBadge();
             } else {
-                categoryCtv.setCompoundDrawables(null, null, null, null);
+                categoryBctv.hiddenBadge();
             }
-            categoryCtv.setText(homeCategory.title);
+            categoryBctv.setText(homeCategory.title);
         }
     }
 
