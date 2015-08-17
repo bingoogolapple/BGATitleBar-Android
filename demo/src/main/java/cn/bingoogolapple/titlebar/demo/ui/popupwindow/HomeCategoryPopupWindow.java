@@ -1,11 +1,11 @@
 package cn.bingoogolapple.titlebar.demo.ui.popupwindow;
 
 import android.app.Activity;
-import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 
 import java.util.List;
@@ -18,7 +18,6 @@ import cn.bingoogolapple.titlebar.demo.R;
 import cn.bingoogolapple.titlebar.demo.ui.model.HomeCategory;
 import cn.bingoogolapple.titlebar.demo.util.ToastUtils;
 import cn.bingoogolapple.titlebar.demo.util.UIUtils;
-
 
 /**
  * 作者:王浩 邮件:bingoogolapple@gmail.com
@@ -43,11 +42,11 @@ public class HomeCategoryPopupWindow extends BasePopupWindow {
     @Override
     protected void setListener() {
         getViewById(R.id.btn_home_category_edit).setOnClickListener(this);
-        mCategoryAdapter = new CategoryAdapter(mActivity);
+        mCategoryAdapter = new CategoryAdapter(mCategoryRv);
         mCategoryAdapter.setOnItemChildClickListener(new BGAOnItemChildClickListener() {
             @Override
-            public void onItemChildClick(View view, int position) {
-                if (mDelegate != null && view.getId() == R.id.ctv_item_home_category) {
+            public void onItemChildClick(ViewGroup parent, View childView, int position) {
+                if (mDelegate != null && childView.getId() == R.id.ctv_item_home_category) {
                     HomeCategory homeCategory = mCategoryAdapter.getItem(position);
                     for (HomeCategory category : mHomeCategories) {
                         category.selected = false;
@@ -94,8 +93,8 @@ public class HomeCategoryPopupWindow extends BasePopupWindow {
 
     private static class CategoryAdapter extends BGARecyclerViewAdapter<HomeCategory> {
 
-        public CategoryAdapter(Context context) {
-            super(context, R.layout.item_home_category);
+        public CategoryAdapter(RecyclerView recyclerView) {
+            super(recyclerView, R.layout.item_home_category);
         }
 
         @Override
