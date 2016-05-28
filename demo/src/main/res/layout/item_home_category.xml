@@ -29,8 +29,8 @@
             android:background="@color/black" />
     </LinearLayout>
 
-    <cn.bingoogolapple.badgeview.BGABadgeCheckedTextView
-        android:id="@+id/ctv_item_home_category"
+    <cn.bingoogolapple.badgeview.BGABadgeTextView
+        android:id="@+id/tv_item_home_category"
         style="@style/MatchWrap"
         app:badge_bgColor="@color/orange_normal"
         android:layout_marginBottom="2dp"

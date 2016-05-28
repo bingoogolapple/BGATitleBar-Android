@@ -13,7 +13,7 @@ import java.util.List;
 import cn.bingoogolapple.androidcommon.adapter.BGAOnItemChildClickListener;
 import cn.bingoogolapple.androidcommon.adapter.BGARecyclerViewAdapter;
 import cn.bingoogolapple.androidcommon.adapter.BGAViewHolderHelper;
-import cn.bingoogolapple.badgeview.BGABadgeCheckedTextView;
+import cn.bingoogolapple.badgeview.BGABadgeTextView;
 import cn.bingoogolapple.titlebar.demo.R;
 import cn.bingoogolapple.titlebar.demo.ui.model.HomeCategory;
 import cn.bingoogolapple.titlebar.demo.util.ToastUtils;
@@ -46,7 +46,7 @@ public class HomeCategoryPopupWindow extends BasePopupWindow {
         mCategoryAdapter.setOnItemChildClickListener(new BGAOnItemChildClickListener() {
             @Override
             public void onItemChildClick(ViewGroup parent, View childView, int position) {
-                if (mDelegate != null && childView.getId() == R.id.ctv_item_home_category) {
+                if (mDelegate != null && childView.getId() == R.id.tv_item_home_category) {
                     HomeCategory homeCategory = mCategoryAdapter.getItem(position);
                     for (HomeCategory category : mHomeCategories) {
                         category.selected = false;
@@ -99,7 +99,7 @@ public class HomeCategoryPopupWindow extends BasePopupWindow {
 
         @Override
         protected void setItemChildListener(BGAViewHolderHelper viewHolderHelper) {
-            viewHolderHelper.setItemChildClickListener(R.id.ctv_item_home_category);
+            viewHolderHelper.setItemChildClickListener(R.id.tv_item_home_category);
         }
 
         @Override
@@ -110,12 +110,7 @@ public class HomeCategoryPopupWindow extends BasePopupWindow {
                 viewHolderHelper.setVisibility(R.id.ll_item_home_header, View.VISIBLE);
                 viewHolderHelper.setText(R.id.tv_item_home_header, homeCategory.header);
             }
-            BGABadgeCheckedTextView categoryBctv = viewHolderHelper.getView(R.id.ctv_item_home_category);
-            if (homeCategory.selected) {
-                categoryBctv.setChecked(true);
-            } else {
-                categoryBctv.setChecked(false);
-            }
+            BGABadgeTextView categoryBctv = viewHolderHelper.getView(R.id.tv_item_home_category);
             if (homeCategory.hasNewStatus) {
                 categoryBctv.showCirclePointBadge();
             } else {
