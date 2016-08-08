@@ -2,8 +2,6 @@
 ============
 
 [ ![Download](https://api.bintray.com/packages/bingoogolapple/maven/bga-titlebar/images/download.svg) ](https://bintray.com/bingoogolapple/maven/bga-titlebar/_latestVersion)
->关于我<br/>
->微博：<a href="http://weibo.com/bingoogol" target="_blank">bingoogolapple</a>&nbsp;&nbsp;&nbsp;&nbsp;主页：<a  href="http://www.bingoogolapple.cn" target="_blank">bingoogolapple.cn</a>&nbsp;&nbsp;&nbsp;&nbsp;邮箱：<a href="mailto:bingoogolapple@gmail.com" target="_blank">bingoogolapple@gmail.com</a>
 
 工作以来公司UI设计师出的Android效果图都是iOS风格的Titlebar，新项目还是用原来那一套，不想重复造轮子，所以趁着这次练习 [仿新浪微博Android客户端](https://github.com/bingoogolapple/BGAWeiBo-Android)，抽取一个通用的iOS风格的Titlebar
 
