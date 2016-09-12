@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.IdRes;
 import android.support.annotation.StringRes;
 import android.support.v7.widget.AppCompatCheckedTextView;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
@@ -133,14 +134,28 @@ public class BGATitlebar extends RelativeLayout implements View.OnClickListener 
     }
 
     public void setLeftText(CharSequence text) {
-        mLeftCtv.setText(text);
-        showLeftCtv();
+        if (TextUtils.isEmpty(text)) {
+            mLeftCtv.setText("");
+            if (mLeftCtv.getCompoundDrawables()[0] == null) {
+                hiddenLeftCtv();
+            }
+        } else {
+            mLeftCtv.setText(text);
+            showLeftCtv();
+        }
     }
 
     public void setLeftDrawable(Drawable drawable) {
-        drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
-        mLeftCtv.setCompoundDrawables(drawable, null, null, null);
-        showLeftCtv();
+        if (drawable == null) {
+            mLeftCtv.setCompoundDrawables(null, null, null, null);
+            if (TextUtils.isEmpty(mLeftCtv.getText())) {
+                hiddenLeftCtv();
+            }
+        } else {
+            drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+            mLeftCtv.setCompoundDrawables(drawable, null, null, null);
+            showLeftCtv();
+        }
     }
 
     public void hiddenTitleCtv() {
@@ -152,8 +167,15 @@ public class BGATitlebar extends RelativeLayout implements View.OnClickListener 
     }
 
     public void setTitleText(CharSequence text) {
-        mTitleCtv.setText(text);
-        showTitleCtv();
+        if (TextUtils.isEmpty(text)) {
+            mTitleCtv.setText("");
+            if (mTitleCtv.getCompoundDrawables()[2] == null) {
+                hiddenTitleCtv();
+            }
+        } else {
+            mTitleCtv.setText(text);
+            showTitleCtv();
+        }
     }
 
     public void setTitleText(@StringRes int resid) {
@@ -161,9 +183,16 @@ public class BGATitlebar extends RelativeLayout implements View.OnClickListener 
     }
 
     public void setTitleDrawable(Drawable drawable) {
-        drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
-        mTitleCtv.setCompoundDrawables(null, null, drawable, null);
-        showTitleCtv();
+        if (drawable == null) {
+            mTitleCtv.setCompoundDrawables(null, null, null, null);
+            if (TextUtils.isEmpty(mTitleCtv.getText())) {
+                hiddenTitleCtv();
+            }
+        } else {
+            drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+            mTitleCtv.setCompoundDrawables(null, null, drawable, null);
+            showTitleCtv();
+        }
     }
 
     public void hiddenRightCtv() {
@@ -175,8 +204,15 @@ public class BGATitlebar extends RelativeLayout implements View.OnClickListener 
     }
 
     public void setRightText(CharSequence text) {
-        mRightCtv.setText(text);
-        showRightCtv();
+        if (TextUtils.isEmpty(text)) {
+            mRightCtv.setText("");
+            if (mRightCtv.getCompoundDrawables()[2] == null) {
+                hiddenRightCtv();
+            }
+        } else {
+            mRightCtv.setText(text);
+            showRightCtv();
+        }
     }
 
     public void setRightText(@StringRes int resid) {
@@ -184,9 +220,16 @@ public class BGATitlebar extends RelativeLayout implements View.OnClickListener 
     }
 
     public void setRightDrawable(Drawable drawable) {
-        drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
-        mRightCtv.setCompoundDrawables(null, null, drawable, null);
-        showRightCtv();
+        if (drawable == null) {
+            mRightCtv.setCompoundDrawables(null, null, null, null);
+            if (TextUtils.isEmpty(mRightCtv.getText())) {
+                hiddenRightCtv();
+            }
+        } else {
+            drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+            mRightCtv.setCompoundDrawables(null, null, drawable, null);
+            showRightCtv();
+        }
     }
 
     public void setLeftCtvChecked(boolean checked) {

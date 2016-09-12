@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         // 取消默认的单行
         titlebar3.getTitleCtv().setSingleLine(false);
         // 设置行间距
-        titlebar3.getTitleCtv().setLineSpacing(3,1);
+        titlebar3.getTitleCtv().setLineSpacing(3, 1);
 
         String sendWeiBo = "发微博";
         String username = "bingoogolapple";
