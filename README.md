@@ -1,29 +1,29 @@
 :running:BGATitlebar-Android:running:
 ============
 
-[ ![Download](https://api.bintray.com/packages/bingoogolapple/maven/bga-titlebar/images/download.svg) ](https://bintray.com/bingoogolapple/maven/bga-titlebar/_latestVersion)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/cn.bingoogolapple/bga-titlebar/badge.svg)](https://maven-badges.herokuapp.com/maven-central/cn.bingoogolapple/bga-titlebar)
 
-工作以来公司UI设计师出的Android效果图都是iOS风格的Titlebar，新项目还是用原来那一套，不想重复造轮子，所以趁着这次练习 [仿新浪微博Android客户端](https://github.com/bingoogolapple/BGAWeiBo-Android)，抽取一个通用的iOS风格的Titlebar
+工作以来公司 UI 设计师出的 Android 效果图都是 iOS 风格的 Titlebar，新项目还是用原来那一套，不想重复造轮子，所以趁着这次练习 [仿新浪微博 Android 客户端](https://github.com/bingoogolapple/BGAWeiBo-Android)，抽取一个通用的 iOS 风格的 Titlebar
 
->但是作为Android开发者，平时学习练手时还是得紧跟Google的步伐，说不定哪天公司的UI射击狮们就出一套MD风格的效果图
+>但是作为 Android 开发者，平时学习练手时还是得紧跟 Google 的步伐，说不定哪天公司的 UI 射击狮们就出一套 MD 风格的效果图
 
-demo中演示了各种情况的标题和新浪微博首页选择微博分类案例
+demo 中演示了各种情况的标题和新浪微博首页选择微博分类案例
 
-### 效果图
+## 效果图
 ![bgatitlebar](https://cloud.githubusercontent.com/assets/8949716/17476247/99c19a10-5d91-11e6-85b1-55764481686e.gif)
 
-### 基本使用
+## 基本使用
 
-#### 1.添加Gradle依赖
+### 1.添加 Gradle 依赖
 
 ```groovy
 dependencies {
-    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:appcompat-v7:latestVersion'
     compile 'cn.bingoogolapple:bga-titlebar:latestVersion@aar'
 }
 ```
 
-#### 2.在布局文件中添加BGATitlebar
+### 2.在布局文件中添加 BGATitlebar
 
 ```xml
 <cn.bingoogolapple.titlebar.BGATitlebar
@@ -36,7 +36,7 @@ dependencies {
         app:bgatitlebar_titleText="bingoogolapple" />
 ```
 
-#### 3.在Activity或者Fragment中配置BGATitlebar
+### 3.在 Activity 或者 Fragment中 配置 BGATitlebar
 
 ```java
 mTitlebar = (BGATitlebar) findViewById(R.id.titlebar);
@@ -58,9 +58,9 @@ mTitlebar.setDelegate(new BGATitlebar.BGATitlebarDelegate() {
 });
 ```
 
-### 自定义属性说明
+## 自定义属性说明
 
->建议在项目中把下面这五项定义在styles.xml里
+>建议在项目中把下面这五项定义在 styles.xml 里
 
 * bgatitlebar_leftAndRightTextColor 左右按钮文字颜色
 * bgatitlebar_titleTextColor 中间标题文字颜色
@@ -68,7 +68,7 @@ mTitlebar.setDelegate(new BGATitlebar.BGATitlebarDelegate() {
 * bgatitlebar_titleTextSize 中间标题文字大小
 * bgatitlebar_leftAndRightPadding 左右按钮在水平方向上的padding
 
->下面这几项根据每个页面的业务写在layout中（可以把带有返回按钮的titlebar也单独抽取一个style）
+>下面这几项根据每个页面的业务写在 layout 中（可以把带有返回按钮的 titlebar 也单独抽取一个 style）
 
 * bgatitlebar_leftText 左边按钮的文字
 * bgatitlebar_rightText 右边按钮的文字
@@ -92,7 +92,7 @@ mTitlebar.setDelegate(new BGATitlebar.BGATitlebarDelegate() {
 * bgatitlebar_isLeftTextBold 左边文字是否为粗体，默认为false
 * bgatitlebar_isRightTextBold 右边文字是否为粗体，默认为false
 
-### 代码是最好的老师，更多详细用法请查看[demo](https://github.com/bingoogolapple/BGATitlebar-Android/tree/master/demo):feet:
+### 代码是最好的老师，更多详细用法请查看 [demo](https://github.com/bingoogolapple/BGATitlebar-Android/tree/master/demo):feet:
 
 ## 关于我
 

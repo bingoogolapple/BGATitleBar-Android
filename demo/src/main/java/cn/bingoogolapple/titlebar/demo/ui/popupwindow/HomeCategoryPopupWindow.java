@@ -76,7 +76,7 @@ public class HomeCategoryPopupWindow extends BasePopupWindow {
 
     public void setCategorys(List<HomeCategory> homeCategories) {
         mHomeCategories = homeCategories;
-        mCategoryAdapter.setDatas(mHomeCategories);
+        mCategoryAdapter.setData(mHomeCategories);
     }
 
     @Override
