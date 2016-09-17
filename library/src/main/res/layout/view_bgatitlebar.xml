@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
 
     <android.support.v7.widget.AppCompatCheckedTextView
         android:id="@+id/ctv_bgatitlebar_left"
@@ -18,7 +18,7 @@
         android:singleLine="true"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        android:visibility="gone" />
+        android:visibility="gone"/>
 
     <android.support.v7.widget.AppCompatCheckedTextView
         android:id="@+id/ctv_bgatitlebar_title"
@@ -31,10 +31,10 @@
         android:gravity="center"
         android:maxWidth="144dp"
         android:singleLine="true"
-        android:textStyle="bold"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        android:visibility="gone" />
+        android:textStyle="bold"
+        android:visibility="gone"/>
 
     <android.support.v7.widget.AppCompatCheckedTextView
         android:id="@+id/ctv_bgatitlebar_right"
@@ -51,6 +51,6 @@
         android:singleLine="true"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        android:visibility="gone" />
+        android:visibility="gone"/>
 
-</RelativeLayout>
+</merge>
