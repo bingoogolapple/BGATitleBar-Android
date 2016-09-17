@@ -7,10 +7,10 @@
 
 >但是作为 Android 开发者，平时学习练手时还是得紧跟 Google 的步伐，说不定哪天公司的 UI 射击狮们就出一套 MD 风格的效果图
 
-demo 中演示了各种情况的标题和新浪微博首页选择微博分类案例
+支持图片加文本、仅文本、仅图片、微博首页两种文本颜色的大小标题、资料设置进度的两种文本颜色的标题、动态切换文本和图片的显示、监听各按钮的点击事件
 
 ## 效果图
-![bgatitlebar](https://cloud.githubusercontent.com/assets/8949716/17476247/99c19a10-5d91-11e6-85b1-55764481686e.gif)
+![bgatitlebar](https://cloud.githubusercontent.com/assets/8949716/17476247/99c19a10-5d91-11e6-85b1-55764481686e.gif)![titlebar2](https://cloud.githubusercontent.com/assets/8949716/18605827/7bd49bc0-7cd0-11e6-8569-b70c97ee3ff3.gif)
 
 ## 基本使用
 
