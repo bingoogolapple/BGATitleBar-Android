@@ -2,6 +2,7 @@ package cn.bingoogolapple.titlebar;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.IdRes;
 import android.support.annotation.StringRes;
@@ -101,12 +102,16 @@ public class BGATitlebar extends RelativeLayout implements View.OnClickListener 
         } else if (attr == R.styleable.BGATitlebar_bgatitlebar_titleMaxWidth) {
             setTitleCtvMaxWidth(typedArray.getDimensionPixelSize(attr, dp2px(getContext(), 144)));
         } else if (attr == R.styleable.BGATitlebar_bgatitlebar_isTitleTextBold) {
-            mTitleCtv.getPaint().setFakeBoldText(typedArray.getBoolean(attr, true));
+            mTitleCtv.getPaint().setTypeface(getTypeface(typedArray.getBoolean(attr, true)));
         } else if (attr == R.styleable.BGATitlebar_bgatitlebar_isLeftTextBold) {
-            mLeftCtv.getPaint().setFakeBoldText(typedArray.getBoolean(attr, false));
+            mLeftCtv.getPaint().setTypeface(getTypeface(typedArray.getBoolean(attr, false)));
         } else if (attr == R.styleable.BGATitlebar_bgatitlebar_isRightTextBold) {
-            mRightCtv.getPaint().setFakeBoldText(typedArray.getBoolean(attr, false));
+            mRightCtv.getPaint().setTypeface(getTypeface(typedArray.getBoolean(attr, false)));
         }
+    }
+
+    private Typeface getTypeface(boolean isBold) {
+        return isBold ? Typeface.DEFAULT_BOLD : Typeface.DEFAULT;
     }
 
     public void setLeftCtvMaxWidth(int maxWidth) {
