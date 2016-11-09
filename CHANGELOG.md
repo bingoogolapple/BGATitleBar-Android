@@ -1,6 +1,12 @@
 Change Log
 ==========
 
+Version 1.0.5 *(2016-10-5)*
+----------------------------
+
+- 重命名 BGATitlebar 为 BGATitleBar
+- 修改 BGATitlebarDelegate 为 Delegate 接口 和 SimpleDelegate 类
+
 Version 1.0.4 *(2016-10-4)*
 ----------------------------
 

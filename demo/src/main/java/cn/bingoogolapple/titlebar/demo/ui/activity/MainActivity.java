@@ -12,14 +12,14 @@ import android.widget.PopupWindow;
 
 import java.util.List;
 
-import cn.bingoogolapple.titlebar.BGATitlebar;
+import cn.bingoogolapple.titlebar.BGATitleBar;
 import cn.bingoogolapple.titlebar.demo.R;
 import cn.bingoogolapple.titlebar.demo.ui.model.HomeCategory;
 import cn.bingoogolapple.titlebar.demo.ui.popupwindow.HomeCategoryPopupWindow;
 import cn.bingoogolapple.titlebar.demo.util.ToastUtils;
 
 public class MainActivity extends AppCompatActivity {
-    private BGATitlebar mTitlebar;
+    private BGATitleBar mTitleBar;
     private HomeCategoryPopupWindow mCategoryPw;
     private List<HomeCategory> mHomeCategorys;
 
@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
      * 测试各个标题文本的点击事件
      */
     private void testClick() {
-        mTitlebar = (BGATitlebar) findViewById(R.id.titlebar);
-        mTitlebar.setDelegate(new BGATitlebar.BGATitlebarDelegate() {
+        mTitleBar = (BGATitleBar) findViewById(R.id.titlebar);
+        mTitleBar.setDelegate(new BGATitleBar.Delegate() {
             @Override
             public void onClickLeftCtv() {
                 ToastUtils.show("点击了加关注");
@@ -62,11 +62,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void showCategoryPw() {
         if (mCategoryPw == null) {
-            mCategoryPw = new HomeCategoryPopupWindow(this, mTitlebar.getTitleCtv());
+            mCategoryPw = new HomeCategoryPopupWindow(this, mTitleBar.getTitleCtv());
             mCategoryPw.setOnDismissListener(new PopupWindow.OnDismissListener() {
                 @Override
                 public void onDismiss() {
-                    mTitlebar.setTitleCtvChecked(false);
+                    mTitleBar.setTitleCtvChecked(false);
                 }
             });
             mCategoryPw.setDelegate(new HomeCategoryPopupWindow.HomeCategoryPopupWindowDelegate() {
@@ -82,15 +82,15 @@ public class MainActivity extends AppCompatActivity {
         }
         mCategoryPw.setCategorys(mHomeCategorys);
         mCategoryPw.show();
-        mTitlebar.setTitleCtvChecked(true);
+        mTitleBar.setTitleCtvChecked(true);
     }
 
     /**
      * 测试隐藏各个标题文本
      */
     private void testHidden() {
-        final BGATitlebar titlebar2 = (BGATitlebar) findViewById(R.id.titlebar2);
-        titlebar2.setDelegate(new BGATitlebar.BGATitlebarDelegate() {
+        final BGATitleBar titlebar2 = (BGATitleBar) findViewById(R.id.titlebar2);
+        titlebar2.setDelegate(new BGATitleBar.Delegate() {
             @Override
             public void onClickLeftCtv() {
                 ToastUtils.show("点击了返回");
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
      * 测试标题文本
      */
     private void testTitleText1() {
-        BGATitlebar titlebar3 = (BGATitlebar) findViewById(R.id.titlebar3);
+        BGATitleBar titlebar3 = (BGATitleBar) findViewById(R.id.titlebar3);
         // 先清除掉默认的粗体，否则下面设置Typeface.NORMAL不会生效
         titlebar3.getTitleCtv().getPaint().setTypeface(Typeface.DEFAULT);
         // 取消默认的单行
@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
      * 测试标题文本
      */
     private void testTitleText2() {
-        BGATitlebar titlebar4 = (BGATitlebar) findViewById(R.id.titlebar4);
+        BGATitleBar titlebar4 = (BGATitleBar) findViewById(R.id.titlebar4);
         // 先清除掉默认的粗体，否则下面设置Typeface.NORMAL不会生效
         titlebar4.getTitleCtv().getPaint().setTypeface(Typeface.DEFAULT);
 

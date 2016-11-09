@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="BGATitlebar">
+    <declare-styleable name="BGATitleBar">
         <!-- 项目中把下面这五项定义在styles.xml里 -->
         <attr name="bgatitlebar_leftAndRightTextColor" format="reference|color" />
         <attr name="bgatitlebar_titleTextColor" format="reference|color" />
