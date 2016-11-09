@@ -3,7 +3,7 @@
               xmlns:app="http://schemas.android.com/apk/res-auto"
               style="@style/MatchMatch.Vertical">
 
-    <cn.bingoogolapple.titlebar.BGATitlebar
+    <cn.bingoogolapple.titlebar.BGATitleBar
         android:id="@+id/titlebar"
         style="@style/TitleBar"
         app:bgatitlebar_leftDrawable="@drawable/selector_nav_friendsearch"
@@ -12,7 +12,7 @@
         app:bgatitlebar_titleDrawablePadding="3dp"
         app:bgatitlebar_titleText="bingoogolapple"/>
 
-    <cn.bingoogolapple.titlebar.BGATitlebar
+    <cn.bingoogolapple.titlebar.BGATitleBar
         android:id="@+id/titlebar2"
         style="@style/TitleBar"
         app:bgatitlebar_leftDrawable="@drawable/selector_nav_back_short"
@@ -20,7 +20,7 @@
         app:bgatitlebar_rightText="我是右边按钮"
         app:bgatitlebar_titleText="标题"/>
 
-    <cn.bingoogolapple.titlebar.BGATitlebar
+    <cn.bingoogolapple.titlebar.BGATitleBar
         style="@style/TitleBar"
         app:bgatitlebar_leftDrawable="@drawable/selector_nav_back_short"
         app:bgatitlebar_leftDrawablePadding="5dp"
@@ -30,14 +30,14 @@
         app:bgatitlebar_titleDrawablePadding="5dp"
         app:bgatitlebar_titleText="标题"/>
 
-    <cn.bingoogolapple.titlebar.BGATitlebar
+    <cn.bingoogolapple.titlebar.BGATitleBar
         style="@style/TitleBar"
         app:bgatitlebar_leftText="左边"
         app:bgatitlebar_rightMaxWidth="120dp"
         app:bgatitlebar_rightText="我是右边按钮"
         app:bgatitlebar_titleText="标题"/>
 
-    <cn.bingoogolapple.titlebar.BGATitlebar
+    <cn.bingoogolapple.titlebar.BGATitleBar
         style="@style/TitleBar"
         app:bgatitlebar_isLeftTextBold="true"
         app:bgatitlebar_isRightTextBold="true"
@@ -47,36 +47,36 @@
         app:bgatitlebar_titleMaxWidth="200dp"
         app:bgatitlebar_titleText="我是头部很长很长的标题"/>
 
-    <cn.bingoogolapple.titlebar.BGATitlebar
+    <cn.bingoogolapple.titlebar.BGATitleBar
         style="@style/TitleBar"
         app:bgatitlebar_leftText="我是左边"
         app:bgatitlebar_rightText="右边"
         app:bgatitlebar_titleText="我是头部很长很长的标题"/>
 
-    <cn.bingoogolapple.titlebar.BGATitlebar
+    <cn.bingoogolapple.titlebar.BGATitleBar
         android:id="@+id/titlebar3"
         style="@style/TitleBar"
         app:bgatitlebar_leftDrawable="@drawable/selector_nav_back_long"
         app:bgatitlebar_rightText="发送"/>
 
-    <cn.bingoogolapple.titlebar.BGATitlebar
+    <cn.bingoogolapple.titlebar.BGATitleBar
         android:id="@+id/titlebar4"
         style="@style/TitleBar"
         app:bgatitlebar_leftDrawable="@drawable/selector_nav_back_long"
         app:bgatitlebar_rightText="确定"
         app:bgatitlebar_titleMaxWidth="215dp"/>
 
-    <cn.bingoogolapple.titlebar.BGATitlebar
+    <cn.bingoogolapple.titlebar.BGATitleBar
         style="@style/TitleBar"
         app:bgatitlebar_rightDrawable="@drawable/selector_nav_more"
         app:bgatitlebar_titleDrawable="@mipmap/logo"/>
 
-    <cn.bingoogolapple.titlebar.BGATitlebar
+    <cn.bingoogolapple.titlebar.BGATitleBar
         style="@style/TitleBar"
         app:bgatitlebar_leftDrawable="@drawable/selector_nav_back_long"
         app:bgatitlebar_titleDrawable="@mipmap/logo"/>
 
-    <cn.bingoogolapple.titlebar.BGATitlebar
+    <cn.bingoogolapple.titlebar.BGATitleBar
         style="@style/TitleBar"
         app:bgatitlebar_titleDrawable="@mipmap/logo"/>
 

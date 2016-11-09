@@ -11,7 +11,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:24.2.1'
+    provided 'com.android.support:appcompat-v7:25.0.0'
 }
 
 // gradle uploadArchives

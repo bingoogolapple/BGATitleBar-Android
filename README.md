@@ -1,9 +1,9 @@
-:running:BGATitlebar-Android:running:
+:running:BGATitleBar-Android:running:
 ============
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/cn.bingoogolapple/bga-titlebar/badge.svg)](https://maven-badges.herokuapp.com/maven-central/cn.bingoogolapple/bga-titlebar)
 
-工作以来公司 UI 设计师出的 Android 效果图都是 iOS 风格的 Titlebar，新项目还是用原来那一套，不想重复造轮子，所以趁着这次练习 [仿新浪微博 Android 客户端](https://github.com/bingoogolapple/BGAWeiBo-Android)，抽取一个通用的 iOS 风格的 Titlebar
+工作以来公司 UI 设计师出的 Android 效果图都是 iOS 风格的 TitleBar，新项目还是用原来那一套，不想重复造轮子，所以趁着这次练习 [仿新浪微博 Android 客户端](https://github.com/bingoogolapple/BGAWeiBo-Android)，抽取一个通用的 iOS 风格的 TitleBar
 
 >但是作为 Android 开发者，平时学习练手时还是得紧跟 Google 的步伐，说不定哪天公司的 UI 射击狮们就出一套 MD 风格的效果图
 
@@ -23,10 +23,10 @@ dependencies {
 }
 ```
 
-### 2.在布局文件中添加 BGATitlebar
+### 2.在布局文件中添加 BGATitleBar
 
 ```xml
-<cn.bingoogolapple.titlebar.BGATitlebar
+<cn.bingoogolapple.titlebar.BGATitleBar
         android:id="@+id/titlebar"
         style="@style/TitleBar"
         app:bgatitlebar_leftDrawable="@drawable/selector_nav_friendsearch"
@@ -36,11 +36,11 @@ dependencies {
         app:bgatitlebar_titleText="bingoogolapple" />
 ```
 
-### 3.在 Activity 或者 Fragment中 配置 BGATitlebar
+### 3.在 Activity 或者 Fragment中 配置 BGATitleBar
 
 ```java
-mTitlebar = (BGATitlebar) findViewById(R.id.titlebar);
-mTitlebar.setDelegate(new BGATitlebar.BGATitlebarDelegate() {
+mTitleBar = (BGATitleBar) findViewById(R.id.titlebar);
+mTitleBar.setDelegate(new BGATitleBar.Delegate() {
     @Override
     public void onClickLeftCtv() {
         // 可选，根据实际业务重写该方法
@@ -92,7 +92,7 @@ mTitlebar.setDelegate(new BGATitlebar.BGATitlebarDelegate() {
 * bgatitlebar_isLeftTextBold 左边文字是否为粗体，默认为false
 * bgatitlebar_isRightTextBold 右边文字是否为粗体，默认为false
 
-### 代码是最好的老师，更多详细用法请查看 [demo](https://github.com/bingoogolapple/BGATitlebar-Android/tree/master/demo):feet:
+### 代码是最好的老师，更多详细用法请查看 [demo](https://github.com/bingoogolapple/bgaweibo-android-Android/tree/master/demo):feet:
 
 ## 关于我
 
