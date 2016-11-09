@@ -92,7 +92,7 @@ mTitleBar.setDelegate(new BGATitleBar.Delegate() {
 * bgatitlebar_isLeftTextBold 左边文字是否为粗体，默认为false
 * bgatitlebar_isRightTextBold 右边文字是否为粗体，默认为false
 
-### 代码是最好的老师，更多详细用法请查看 [demo](https://github.com/bingoogolapple/bgaweibo-android-Android/tree/master/demo):feet:
+### 代码是最好的老师，更多详细用法请查看 [demo](https://github.com/bingoogolapple/BGATitleBar-Android/tree/master/demo):feet:
 
 ## 关于我
 
@@ -102,7 +102,7 @@ mTitleBar.setDelegate(new BGATitleBar.Delegate() {
 
 ## 打赏支持
 
-如果觉得 BGA 系列开源库对您有用，请随意打赏。
+如果觉得 BGA 系列开源库对您有用，请随意打赏。如果猿友有打算购买 [Lantern](https://github.com/getlantern/forum)，可以使用我的邀请码「YFQ9Q3B」购买，双方都赠送三个月的专业版使用时间。
 
 <p align="center">
   <img src="http://7xk9dj.com1.z0.glb.clouddn.com/bga_pay.png" width="450">
