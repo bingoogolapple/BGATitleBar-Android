@@ -23,6 +23,7 @@ public class BGATitleBar extends RelativeLayout {
     private AppCompatCheckedTextView mTitleCtv;
     private AppCompatCheckedTextView mLeftCtv;
     private AppCompatCheckedTextView mRightCtv;
+    private AppCompatCheckedTextView mRightSecondaryCtv;
     private Delegate mDelegate;
 
     public BGATitleBar(Context context) {
@@ -53,6 +54,7 @@ public class BGATitleBar extends RelativeLayout {
     protected void initView() {
         mLeftCtv = getViewById(R.id.ctv_bgatitlebar_left);
         mRightCtv = getViewById(R.id.ctv_bgatitlebar_right);
+        mRightSecondaryCtv = getViewById(R.id.ctv_bgatitlebar_right_secondary);
         mTitleCtv = getViewById(R.id.ctv_bgatitlebar_title);
     }
 
@@ -81,6 +83,15 @@ public class BGATitleBar extends RelativeLayout {
                 }
             }
         });
+        mRightSecondaryCtv.setOnClickListener(new BGAOnNoDoubleClickListener() {
+            @Override
+            public void onNoDoubleClick(View v) {
+                if (mDelegate != null) {
+                    mDelegate.onClickRightSecondaryCtv();
+                }
+            }
+        });
+
     }
 
     protected void initAttr(int attr, TypedArray typedArray) {
@@ -90,21 +101,27 @@ public class BGATitleBar extends RelativeLayout {
             setTitleText(typedArray.getText(attr));
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_rightText) {
             setRightText(typedArray.getText(attr));
+        } else if (attr == R.styleable.BGATitleBar_bgatitlebar_rightSecondaryText) {
+            setRightSecondaryText(typedArray.getText(attr));
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_leftDrawable) {
             setLeftDrawable(typedArray.getDrawable(attr));
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_titleDrawable) {
             setTitleDrawable(typedArray.getDrawable(attr));
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_rightDrawable) {
             setRightDrawable(typedArray.getDrawable(attr));
+        } else if (attr == R.styleable.BGATitleBar_bgatitlebar_rightSecondaryDrawable) {
+            setRightSecondaryDrawable(typedArray.getDrawable(attr));
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_leftAndRightTextSize) {
             int textSize = typedArray.getDimensionPixelSize(attr, sp2px(getContext(), 12));
             mLeftCtv.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
             mRightCtv.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
+            mRightSecondaryCtv.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_titleTextSize) {
             mTitleCtv.setTextSize(TypedValue.COMPLEX_UNIT_PX, typedArray.getDimensionPixelSize(attr, sp2px(getContext(), 16)));
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_leftAndRightTextColor) {
             mLeftCtv.setTextColor(typedArray.getColorStateList(attr));
             mRightCtv.setTextColor(typedArray.getColorStateList(attr));
+            mRightSecondaryCtv.setTextColor(typedArray.getColorStateList(attr));
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_titleTextColor) {
             mTitleCtv.setTextColor(typedArray.getColorStateList(attr));
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_titleDrawablePadding) {
@@ -113,10 +130,12 @@ public class BGATitleBar extends RelativeLayout {
             mLeftCtv.setCompoundDrawablePadding(typedArray.getDimensionPixelSize(attr, dp2px(getContext(), 3)));
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_rightDrawablePadding) {
             mRightCtv.setCompoundDrawablePadding(typedArray.getDimensionPixelSize(attr, dp2px(getContext(), 3)));
+            mRightSecondaryCtv.setCompoundDrawablePadding(typedArray.getDimensionPixelSize(attr, dp2px(getContext(), 3)));
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_leftAndRightPadding) {
             int leftAndRightPadding = typedArray.getDimensionPixelSize(attr, dp2px(getContext(), 10));
             mLeftCtv.setPadding(leftAndRightPadding, 0, leftAndRightPadding, 0);
             mRightCtv.setPadding(leftAndRightPadding, 0, leftAndRightPadding, 0);
+            mRightSecondaryCtv.setPadding(leftAndRightPadding, 0, leftAndRightPadding, 0);
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_leftMaxWidth) {
             setLeftCtvMaxWidth(typedArray.getDimensionPixelSize(attr, dp2px(getContext(), 85)));
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_rightMaxWidth) {
@@ -129,6 +148,7 @@ public class BGATitleBar extends RelativeLayout {
             mLeftCtv.getPaint().setTypeface(getTypeface(typedArray.getBoolean(attr, false)));
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_isRightTextBold) {
             mRightCtv.getPaint().setTypeface(getTypeface(typedArray.getBoolean(attr, false)));
+            mRightSecondaryCtv.getPaint().setTypeface(getTypeface(typedArray.getBoolean(attr, false)));
         }
     }
 
@@ -143,6 +163,7 @@ public class BGATitleBar extends RelativeLayout {
 
     public BGATitleBar setRightCtvMaxWidth(int maxWidth) {
         mRightCtv.setMaxWidth(maxWidth);
+        mRightSecondaryCtv.setMaxWidth(maxWidth);
         return this;
     }
 
@@ -245,6 +266,53 @@ public class BGATitleBar extends RelativeLayout {
         return this;
     }
 
+    public BGATitleBar hiddenRightSecondaryCtv() {
+        mRightSecondaryCtv.setVisibility(GONE);
+        return this;
+    }
+
+    public BGATitleBar showRightSecondaryCtv() {
+        mRightSecondaryCtv.setVisibility(VISIBLE);
+        return this;
+    }
+
+    public BGATitleBar setRightSecondaryText(CharSequence text) {
+        if (TextUtils.isEmpty(text)) {
+            mRightSecondaryCtv.setText("");
+            if (mRightSecondaryCtv.getCompoundDrawables()[2] == null) {
+                hiddenRightSecondaryCtv();
+            }
+        } else {
+            mRightSecondaryCtv.setText(text);
+            showRightSecondaryCtv();
+        }
+        return this;
+    }
+
+    public BGATitleBar setRightSecondaryText(@StringRes int resid) {
+        setRightSecondaryText(getResources().getString(resid));
+        return this;
+    }
+
+    public BGATitleBar setRightSecondaryDrawable(@DrawableRes int resId) {
+        setRightSecondaryDrawable(getResources().getDrawable(resId));
+        return this;
+    }
+
+    public BGATitleBar setRightSecondaryDrawable(Drawable drawable) {
+        if (drawable == null) {
+            mRightSecondaryCtv.setCompoundDrawables(null, null, null, null);
+            if (TextUtils.isEmpty(mRightSecondaryCtv.getText())) {
+                hiddenRightSecondaryCtv();
+            }
+        } else {
+            drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+            mRightSecondaryCtv.setCompoundDrawables(null, null, drawable, null);
+            showRightSecondaryCtv();
+        }
+        return this;
+    }
+
     public BGATitleBar hiddenRightCtv() {
         mRightCtv.setVisibility(GONE);
         return this;
@@ -307,12 +375,21 @@ public class BGATitleBar extends RelativeLayout {
         return this;
     }
 
+    public BGATitleBar setRightSecondaryCtvChecked(boolean checked) {
+        mRightSecondaryCtv.setChecked(checked);
+        return this;
+    }
+
     public AppCompatCheckedTextView getLeftCtv() {
         return mLeftCtv;
     }
 
     public AppCompatCheckedTextView getRightCtv() {
         return mRightCtv;
+    }
+
+    public AppCompatCheckedTextView getRightSecondaryCtv() {
+        return mRightSecondaryCtv;
     }
 
     public AppCompatCheckedTextView getTitleCtv() {
@@ -349,6 +426,8 @@ public class BGATitleBar extends RelativeLayout {
         void onClickTitleCtv();
 
         void onClickRightCtv();
+
+        void onClickRightSecondaryCtv();
     }
 
     public static class SimpleDelegate implements Delegate {
@@ -363,6 +442,10 @@ public class BGATitleBar extends RelativeLayout {
 
         @Override
         public void onClickRightCtv() {
+        }
+
+        @Override
+        public void onClickRightSecondaryCtv() {
         }
     }
 }

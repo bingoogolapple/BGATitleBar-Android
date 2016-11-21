@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:tools="http://schemas.android.com/tools"
        android:layout_width="match_parent"
        android:layout_height="match_parent">
 
@@ -18,7 +19,9 @@
         android:singleLine="true"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        tools:text="Left"
+        tools:visibility="visible"/>
 
     <android.support.v7.widget.AppCompatCheckedTextView
         android:id="@+id/ctv_bgatitlebar_title"
@@ -34,23 +37,59 @@
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        tools:text="Title"
+        tools:visibility="visible"/>
 
-    <android.support.v7.widget.AppCompatCheckedTextView
-        android:id="@+id/ctv_bgatitlebar_right"
+    <android.support.v7.widget.ViewStubCompat
+        android:id="@+id/vsc_bgatitlebar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:maxWidth="144dp"/>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
-        android:background="@android:color/transparent"
-        android:clickable="true"
-        android:ellipsize="end"
-        android:gravity="center"
-        android:maxWidth="85dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:singleLine="true"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:visibility="gone"/>
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatCheckedTextView
+            android:id="@+id/ctv_bgatitlebar_right_secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxWidth="85dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:visibility="gone"
+            tools:text="Secondary"
+            tools:visibility="visible"/>
+
+        <android.support.v7.widget.AppCompatCheckedTextView
+            android:id="@+id/ctv_bgatitlebar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxWidth="85dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:visibility="gone"
+            tools:text="Right"
+            tools:visibility="visible"/>
+    </LinearLayout>
 
 </merge>
