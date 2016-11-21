@@ -30,6 +30,11 @@ public class BGATitleBarBindingAdapter {
         titleBar.setRightText(text);
     }
 
+    @BindingAdapter("bgatitlebar_rightText")
+    public static void setRightSecondaryText(BGATitleBar titleBar, String text) {
+        titleBar.setRightSecondaryText(text);
+    }
+
     @BindingAdapter("bgatitlebar_leftDrawable")
     public static void setLeftDrawable(BGATitleBar titleBar, Drawable drawable) {
         titleBar.setLeftDrawable(drawable);
@@ -45,4 +50,8 @@ public class BGATitleBarBindingAdapter {
         titleBar.setRightDrawable(drawable);
     }
 
+    @BindingAdapter("bgatitlebar_rightSecondaryDrawable")
+    public static void setRightSecondaryDrawable(BGATitleBar titleBar, Drawable drawable) {
+        titleBar.setRightSecondaryDrawable(drawable);
+    }
 }

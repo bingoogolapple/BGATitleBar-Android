@@ -1,6 +1,11 @@
 Change Log
 ==========
 
+Version 1.0.6 *(2016-11-22)*
+----------------------------
+
+- fix #7 增加 bgatitlebar_rightSecondaryText 和 bgatitlebar_rightSecondaryDrawable，Delegate 增加 onClickRightSecondaryCtv 方法
+
 Version 1.0.6 *(2016-11-21)*
 ----------------------------
 

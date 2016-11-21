@@ -57,6 +57,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClickRightCtv() {
                 ToastUtils.show("点击了雷达");
             }
+
+            @Override
+            public void onClickRightSecondaryCtv() {
+            }
         });
     }
 
@@ -107,6 +111,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClickRightCtv() {
                 ToastUtils.show("点击了右边按钮");
                 titlebar2.hiddenRightCtv();
+            }
+
+            @Override
+            public void onClickRightSecondaryCtv() {
+
             }
         });
     }
