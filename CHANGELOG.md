@@ -1,7 +1,12 @@
 Change Log
 ==========
 
-Version 1.0.5 *(2016-10-5)*
+Version 1.0.6 *(2016-11-21)*
+----------------------------
+
+- 文字、图片、Delegate 等支持 DataBinding
+
+Version 1.0.5 *(2016-11-9)*
 ----------------------------
 
 - 重命名 BGATitlebar 为 BGATitleBar

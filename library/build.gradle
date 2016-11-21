@@ -8,10 +8,14 @@ android {
         minSdkVersion ANDROID_BUILD_MIN_SDK_VERSION as int
         targetSdkVersion ANDROID_BUILD_TARGET_SDK_VERSION as int
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
-    provided 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support:appcompat-v7:25.0.1'
 }
 
 // gradle uploadArchives
