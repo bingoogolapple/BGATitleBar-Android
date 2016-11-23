@@ -42,26 +42,26 @@ public class MainActivity extends AppCompatActivity {
      */
     private void testClick() {
         mTitleBar = (BGATitleBar) findViewById(R.id.titlebar);
-        mTitleBar.setDelegate(new BGATitleBar.Delegate() {
-            @Override
-            public void onClickLeftCtv() {
-                ToastUtils.show("点击了加关注");
-            }
+mTitleBar.setDelegate(new BGATitleBar.Delegate() {
+    @Override
+    public void onClickLeftCtv() {
+        ToastUtils.show("点击了加关注");
+    }
 
-            @Override
-            public void onClickTitleCtv() {
-                showCategoryPw();
-            }
+    @Override
+    public void onClickTitleCtv() {
+        showCategoryPw();
+    }
 
-            @Override
-            public void onClickRightCtv() {
-                ToastUtils.show("点击了雷达");
-            }
+    @Override
+    public void onClickRightCtv() {
+        ToastUtils.show("点击了雷达");
+    }
 
-            @Override
-            public void onClickRightSecondaryCtv() {
-            }
-        });
+    @Override
+    public void onClickRightSecondaryCtv() {
+    }
+});
     }
 
     private void showCategoryPw() {
