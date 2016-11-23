@@ -1,7 +1,12 @@
 Change Log
 ==========
 
-Version 1.0.6 *(2016-11-22)*
+Version 1.0.8 *(2016-11-23)*
+----------------------------
+
+- rightSecondaryCtv 的 padding 为 rightCtv 的 padding / 2
+
+Version 1.0.7 *(2016-11-22)*
 ----------------------------
 
 - fix #7 增加 bgatitlebar_rightSecondaryText 和 bgatitlebar_rightSecondaryDrawable，Delegate 增加 onClickRightSecondaryCtv 方法

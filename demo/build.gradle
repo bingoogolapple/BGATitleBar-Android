@@ -16,7 +16,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.1'
 
 //    compile project(':library')
-    compile 'cn.bingoogolapple:bga-titlebar:1.0.7@aar'
+    compile 'cn.bingoogolapple:bga-titlebar:1.0.8@aar'
 
 
     // 以下三个库只是为了演示微博分类窗口

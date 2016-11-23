@@ -11,6 +11,7 @@
 
 ## 效果图
 ![bgatitlebar](https://cloud.githubusercontent.com/assets/8949716/17476247/99c19a10-5d91-11e6-85b1-55764481686e.gif)![titlebar2](https://cloud.githubusercontent.com/assets/8949716/18605827/7bd49bc0-7cd0-11e6-8569-b70c97ee3ff3.gif)
+![dkt](https://cloud.githubusercontent.com/assets/8949716/20560633/5e138154-b1b5-11e6-8824-b212438a1cf8.png)
 
 ## 基本使用
 
@@ -43,17 +44,22 @@ mTitleBar = (BGATitleBar) findViewById(R.id.titlebar);
 mTitleBar.setDelegate(new BGATitleBar.Delegate() {
     @Override
     public void onClickLeftCtv() {
-        // 可选，根据实际业务重写该方法
+        // 点击左上角按钮
     }
 
     @Override
     public void onClickTitleCtv() {
-        // 可选，根据实际业务重写该方法
+        // 点击标题按钮
     }
 
     @Override
     public void onClickRightCtv() {
-        // 可选，根据实际业务重写该方法
+        // 点击右上角按钮
+    }
+
+    @Override
+    public void onClickRightSecondaryCtv() {
+        // 点击右上角倒数第二个按钮
     }
 });
 ```
@@ -71,11 +77,13 @@ mTitleBar.setDelegate(new BGATitleBar.Delegate() {
 >下面这几项根据每个页面的业务写在 layout 中（可以把带有返回按钮的 titlebar 也单独抽取一个 style）
 
 * bgatitlebar_leftText 左边按钮的文字
-* bgatitlebar_rightText 右边按钮的文字
 * bgatitlebar_titleText 中间标题文字
+* bgatitlebar_rightText 右边按钮的文字
+* bgatitlebar_rightSecondaryText 右边倒数第二个按钮的文字
 * bgatitlebar_leftDrawable 左边按钮图标
-* bgatitlebar_rightDrawable 右边按钮图标
 * bgatitlebar_titleDrawable 中间标题图标
+* bgatitlebar_rightDrawable 右边按钮图标
+* bgatitlebar_rightSecondaryDrawable 右边倒数第二个按钮图标
 * bgatitlebar_titleDrawablePadding 中间按钮文本和图标之间的间距（当既有titleText，又有titleDrawable时，设置该属性，例如新浪微博首页选择微博分类 ）
 * bgatitlebar_leftDrawablePadding 左边按钮文本和图标之间的间距（当既有leftText，又有leftDrawable时，设置该属性）
 * bgatitlebar_rightDrawablePadding 右边按钮和图标之间的间距（当既有rightText，又有rightDrawable时，设置该属性）

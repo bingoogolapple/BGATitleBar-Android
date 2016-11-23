@@ -134,8 +134,8 @@ public class BGATitleBar extends RelativeLayout {
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_leftAndRightPadding) {
             int leftAndRightPadding = typedArray.getDimensionPixelSize(attr, dp2px(getContext(), 10));
             mLeftCtv.setPadding(leftAndRightPadding, 0, leftAndRightPadding, 0);
-            mRightCtv.setPadding(leftAndRightPadding, 0, leftAndRightPadding, 0);
-            mRightSecondaryCtv.setPadding(leftAndRightPadding, 0, leftAndRightPadding, 0);
+            mRightCtv.setPadding(leftAndRightPadding / 2, 0, leftAndRightPadding, 0);
+            mRightSecondaryCtv.setPadding(leftAndRightPadding / 2, 0, leftAndRightPadding / 2, 0);
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_leftMaxWidth) {
             setLeftCtvMaxWidth(typedArray.getDimensionPixelSize(attr, dp2px(getContext(), 85)));
         } else if (attr == R.styleable.BGATitleBar_bgatitlebar_rightMaxWidth) {
