@@ -98,7 +98,7 @@ public class HomeCategoryPopupWindow extends BasePopupWindow {
         }
 
         @Override
-        protected void setItemChildListener(BGAViewHolderHelper viewHolderHelper) {
+        protected void setItemChildListener(BGAViewHolderHelper viewHolderHelper, int viewType) {
             viewHolderHelper.setItemChildClickListener(R.id.tv_item_home_category);
         }
 
